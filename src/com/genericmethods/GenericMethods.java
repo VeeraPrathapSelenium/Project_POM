@@ -267,7 +267,48 @@ public class GenericMethods {
 		return data;
 
 	}
-	
+	/**
+	 * @name:hover
+	 * @purpose:This method is used to hover on an element
+	 * @input:WebElement element,String elementname,String pagename,String data
+	 * @output:
+	 * 
+	 * @param element
+	 * @param elementname
+	 * @param pagename
+	 * @return
+	 */
+
+	public  boolean hover(WebElement element,String elementname,String pagename,String data)
+	{
+		boolean status=true;
+		try {
+			Actions acc=new Actions(driver);
+			acc.moveToElement(element).build().perform();
+			System.out.println("this method is used to hover on a element: "+element+"success:"+data);
+
+		}catch (Exception e) {
+			
+			System.out.println("this method is unable to hover on a element: "+element+"fail:"+data);
+			System.out.println(e.getMessage());
+		}
+		return status;
+	}
+
+
+
+	/**
+	 * @name:gettext
+	 * @purpose:This method is used to get text of an element
+	 * @input:WebElement element,String elementname,String pagename,String data
+
+	*/
+	public void text(WebElement element,String pagename) {
+		
+		String text=element.getText();
+		String pagename1=driver.getTitle();
+		System.out.println("this method is used to get text of element:"+text+" in this page:"+pagename1);
+	}
 	
 }
 
