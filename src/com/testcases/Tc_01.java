@@ -19,6 +19,7 @@ public class Tc_01 {
 		WebElement element=generic.driver.findElement(By.xpath("//input[@id='FirstName']"));
 		
 		generic.waitForPresenceOfElement(element, "FirstName", "register", 5);
+
 		
 		
 		

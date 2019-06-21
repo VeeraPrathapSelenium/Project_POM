@@ -209,5 +209,65 @@ public class GenericMethods {
 		}
 		return status;
 	}
+	
+	/**
+	 * @name:clickand senddata
+	 * @Purpose:this method is used to click and send data
+	 * @input parameters:WebElement element,String elementname,String Pagename
+	 * @out parameters:boolean
+	 * 
+	 */
 
+	
+	public boolean clickandsenddata(WebElement element,String elementname,String Pagename,String data)
+	{
+		boolean status=true;
+
+		try 
+		{
+			Actions acc=new Actions(driver);
+			acc.click(element).sendKeys("data").build().perform();
+			System.out.println("The Element: "+elementname+"is clicked and "+data+" is sent successfully");
+
+		}catch(Exception e)
+		{
+
+			System.out.println("The Element: "+elementname+"is not clicked and "+data+" is not sent successfully");
+			System.out.println(e.getMessage());
+			status=false;
+		}
+		return status;
+
+
+	}
+
+
+/**
+ * @return 
+ * @name:getAttribute()
+ * @Purpose:this method is used to get the element attribute value
+ * @input parameters:WebElement element,String value
+ * @out parameters:String
+ * 
+ */
+	public String getAttribute(WebElement element,String value )
+	{
+		String data="";
+		try {
+			
+			
+			data=element.getAttribute(value);
+			System.out.println("The attribute :"+value+"value is : "+data);
+			
+		}catch(Exception e)
+		{
+			System.out.println("Unable to get the attribute value");
+			System.out.println(e.getMessage());
+		}
+		return data;
+
+	}
+	
+	
 }
+
