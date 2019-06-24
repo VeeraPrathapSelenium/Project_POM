@@ -307,7 +307,7 @@ public class GenericMethods {
 		
 		String text=element.getText();
 		String pagename1=driver.getTitle();
-		System.out.println("this method is used to get text of element:"+text+" in this page:"+pagename1);
+		System.out.println("this method is used to get text of element111:"+text+" in this page:"+pagename1);
 	}
 	
 }
