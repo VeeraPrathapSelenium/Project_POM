@@ -10,6 +10,7 @@ public class GenericMethods {
 	 @Input:WebElement element,String elementname,String Pagename
 	 @Output:boolean
 	 @author:ranjith
+	 @DesignDate:06/26/2019
 	 **/
 	
 	public boolean IsDisplayed(WebElement element,String elementname,String Pagename)
